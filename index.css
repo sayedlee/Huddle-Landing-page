@@ -1,0 +1,157 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    overflow:auto;
+    width: 100%;
+    background-color:  hsl(257, 40%, 49%);
+    font-family: 'Open Sans', sans-serif;
+    padding:0px 30px 20px 30px;
+
+}
+.bg_img{
+    position: absolute;
+    background-size:cover;
+    max-width: 100%;
+    height:auto;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    position:relative;
+    display: grid;
+    grid-gap: 40px;
+    top:250px;
+    grid-template-columns: repeat(2,minmax(250px,1fr));
+    grid-template-areas: "i p"; 
+
+}
+
+header{
+    padding: 80px 0px 0px 20px;
+    position: absolute;
+    grid-area: h;
+}
+.logo{
+    width: 100%;
+    height: 100%;
+}
+.content{
+    position: absolute;
+    margin-right:35%;
+    grid-area: p;
+    margin-top: 5%;
+}
+h3{
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 800;
+    line-height: 2.5rem;
+}
+p{
+    padding-top: 10px;
+    line-height: 1.5rem;
+}
+.mockups_img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    grid-area: i;
+}
+.register{
+    position: relative;
+    width: 190px;
+    height: 38px;
+    display: flex;
+    justify-content:start;
+    top: 10px;
+}
+a{
+    width: 140px;
+    height: 38px; 
+    text-decoration: none;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 15px;
+    background-color:white;
+    position: absolute;
+
+}
+.btn-register:hover{
+    background-color: violet;
+}
+
+footer{
+    position:absolute;
+    width: 100%;
+    height:40px;
+    color: white;
+    display: flex; 
+    bottom: 0%;
+    justify-content: flex-end;
+    
+}
+i.fab{
+    font-size: 18px;
+    border:1px solid white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 50%;
+}
+.fab:hover{
+    border:1px solid violet;
+}
+
+@media only screen and (max-width:900px){
+    .bg_img{
+        visibility: hidden;
+    }
+    body{
+        width : 100%;
+        height: 100%;
+        background-size: cover;
+        box-sizing: border-box;
+        background-image: url(/images/bg-mobile.svg);
+        background-repeat: no-repeat;
+    }
+    header{
+        padding: 20px 0px;
+    }
+    .container{
+        width: 100%;
+        height: 600px;
+       display: grid;
+       grid-template-columns: repeat(1,auto);
+       grid-template-rows:repeat(2,1fr);
+       grid-template-areas: "i""p";
+       position: relative;
+       top: 200px;
+       justify-content: center;
+    }
+    .content{
+        margin: 2px 10px;
+        grid-area: p;
+        
+    }
+    .mockups_img{
+        display: flex;
+        justify-content: center;
+        grid-area: i;
+        margin: 0px;
+        padding: 0px;
+        display: block;
+    }
+    .register{
+        width: 100%;
+        justify-content: center;
+    }
+    footer{
+     display: flex;
+     justify-content: center; 
+     top: 41em;
+       
+    }
+}
